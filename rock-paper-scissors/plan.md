@@ -15,3 +15,7 @@ Write the function that gets users input
 ### Step 4:
 
 Declare variables to keep track of the players score
+
+### Step 5:
+
+Write a function to play a single round
