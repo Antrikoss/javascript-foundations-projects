@@ -19,3 +19,7 @@ Declare variables to keep track of the players score
 ### Step 5:
 
 Write a function to play a single round
+
+### Step 6:
+
+Write a function to play 5 rounds, keep track of the scores and declaresa winner at the end
