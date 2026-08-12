@@ -8,3 +8,7 @@ function getComputerChoice() {
     if(num > 0.6666 && num < 1)
         return "scissors";
 }
+
+function getHumanChoice() {
+    return prompt("Your choice: ");
+}
