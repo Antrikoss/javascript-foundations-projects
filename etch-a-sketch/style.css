@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    width: 360px;
+    flex-wrap: wrap;
+    margin: 5rem auto;
+}
+
+.square {
+    width: 20px;
+    height:20px;
+    background-color: red;
+    margin: 1px;
+    flex: 0 0 auto;
+}
