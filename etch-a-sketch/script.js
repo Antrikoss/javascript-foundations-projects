@@ -2,12 +2,24 @@ const container = document.querySelector('.container');
 const btn = document.querySelector('.new-grid');
 let n = 0; // user's dimensions for grid
 
-// Create 16 x 16 grid of divs
-for (let i = 0; i < 16 * 16; i++) {
-    let square = document.createElement('div');
-    square.classList.add('square');
-    container.appendChild(square);
+function drawGrid(n) {
+    for (let i = 0; i < n * n; i++) {
+        // Create square
+        let square = document.createElement('div');
+        square.classList.add('square');
+
+        // Calculate the width of each square so 'n' squares fit in every row
+        let widthPercentage = 1 / n * 100; 
+        // Then round the number to 4 decimal places (if it's float)
+        widthPercentage = widthPercentage.toFixed(4);
+        square.style.width = widthPercentage + '%';
+
+        // Add square to grid
+        container.appendChild(square);
+    }
 }
+
+drawGrid(16);
 
 // Set up "hover" effect
 const squares = document.querySelectorAll('.square');
