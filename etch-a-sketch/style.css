@@ -1,16 +1,16 @@
 .container {
     display: flex;
-    width: 320px;
+    width: 960px;
+    height: 960px;
     flex-wrap: wrap;
-    margin: 5rem auto;
+    margin: 0.5rem auto;
 }
 
 .square {
-    width: 20px;
-    height:20px;
+    width: 6.25%;
     background-color: red;
     margin: 0;
-    flex: 0 0 auto;
+    flex: 1 1 auto;
 }
 
 .new-grid {

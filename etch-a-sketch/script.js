@@ -23,5 +23,10 @@ squares.forEach(square => {{
 
 // Add button to get user input for grid's dimensions
 btn.addEventListener('click', () => {
-    n = prompt('Number of squares per side:');
+    do {
+        if (n > 100)
+            alert('Maximum is 100');
+        n = prompt('Number of squares per side:');
+    }
+    while(n > 100);
 });
