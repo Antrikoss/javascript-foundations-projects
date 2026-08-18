@@ -19,6 +19,10 @@ function drawGrid(n) {
     }
 }
 
+function removeGrid() {
+    container.replaceChildren();
+}
+
 drawGrid(16);
 
 // Set up "hover" effect
