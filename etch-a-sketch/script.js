@@ -1,4 +1,6 @@
 const container = document.querySelector('.container');
+const btn = document.querySelector('.new-grid');
+let n = 0; // user's dimensions for grid
 
 // Create 16 x 16 grid of divs
 for (let i = 0; i < 16 * 16; i++) {
@@ -18,3 +20,8 @@ squares.forEach(square => {{
         square.style.backgroundColor = 'red';
     });
 }});
+
+// Add button to get user input for grid's dimensions
+btn.addEventListener('click', () => {
+    n = prompt('Number of squares per side:');
+});
