@@ -23,19 +23,23 @@ function removeGrid() {
     container.replaceChildren();
 }
 
+function addEventListenerToSquares(squares) {
+    squares.forEach(square => {{
+        square.addEventListener('mouseenter', () => {
+            square.style.backgroundColor = 'black';        
+        });
+        square.addEventListener('mouseout', () => {
+            square.style.backgroundColor = '#d3d3d3';
+        });
+    }});
+}
+
+// Draw initial grid of 16 squares per side
 drawGrid(16);
 
 // Set up "hover" effect
-const squares = document.querySelectorAll('.square');
-
-squares.forEach(square => {{
-    square.addEventListener('mouseenter', () => {
-        square.style.backgroundColor = 'blue';        
-    });
-    square.addEventListener('mouseout', () => {
-        square.style.backgroundColor = 'red';
-    });
-}});
+let squares = document.querySelectorAll('.square');
+addEventListenerToSquares(squares);
 
 // Add button to get user input for grid's dimensions
 btn.addEventListener('click', () => {
@@ -45,4 +49,8 @@ btn.addEventListener('click', () => {
         n = prompt('Number of squares per side:');
     }
     while(n > 100);
+    removeGrid();
+    drawGrid(n);
+    squares = document.querySelectorAll('.square');
+    addEventListenerToSquares(squares);
 });
