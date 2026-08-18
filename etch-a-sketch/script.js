@@ -26,10 +26,11 @@ function removeGrid() {
 function addEventListenerToSquares(squares) {
     squares.forEach(square => {{
         square.addEventListener('mouseenter', () => {
-            square.style.backgroundColor = 'black';        
-        });
-        square.addEventListener('mouseout', () => {
-            square.style.backgroundColor = '#d3d3d3';
+            // Set random RGB values for background color by generating numbers between 0 and 255
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;        
         });
     }});
 }
