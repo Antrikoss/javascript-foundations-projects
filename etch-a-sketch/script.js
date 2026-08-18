@@ -7,3 +7,14 @@ for (let i = 0; i < 16 * 16; i++) {
     container.appendChild(square);
 }
 
+// Set up "hover" effect
+const squares = document.querySelectorAll('.square');
+
+squares.forEach(square => {{
+    square.addEventListener('mouseenter', () => {
+        square.style.backgroundColor = 'blue';        
+    });
+    square.addEventListener('mouseout', () => {
+        square.style.backgroundColor = 'red';
+    });
+}});
