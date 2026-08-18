@@ -30,13 +30,23 @@ function addEventListenerToSquares(squares) {
             let r = Math.floor(Math.random() * 256);
             let g = Math.floor(Math.random() * 256);
             let b = Math.floor(Math.random() * 256);
-            square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;        
+            square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            
+            // Add a progressive darkening effect
+            let opacity = parseFloat(getComputedStyle(square).opacity);
+            // reduce opacity by 10%
+            if(opacity > 0)
+                opacity -= 0.1;
+            square.style.opacity = String(opacity);
         });
     }});
 }
 
 // Draw initial grid of 16 squares per side
 drawGrid(16);
+
+// Set container's background to black for the darkening effect
+container.style.backgroundColor = 'black'
 
 // Set up "hover" effect
 let squares = document.querySelectorAll('.square');
