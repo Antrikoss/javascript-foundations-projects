@@ -24,6 +24,8 @@ button {
     font-size: 55px;
     text-align: right;
     margin-top: 1rem;
+    width: 350px;
+    height: 63px;
 }
 
 .buttons .clear-equals {
